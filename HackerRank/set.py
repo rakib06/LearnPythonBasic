@@ -28,4 +28,17 @@ def my_set_problem_2():
             s.remove(int(i[1]))
             print('after  ', item, 's = ', s)
     print(sum(s))
-my_set_problem_2()
+
+
+# my_set_problem_2()
+
+def my_set_problem_union():
+    n1 = int(input())
+    s1 = set(map(int, input().split()))
+    n2 = int(input())
+    s2 = set(map(int, input().split()))
+    s = s1.union(s2)
+    print(len(s))
+
+
+my_set_problem_union()
