@@ -65,4 +65,29 @@ def tuples_1():
         print(hash(t))
 
 
-tuples_1()
+# tuples_1()
+
+def swap_string():
+    def swap_case(st):
+        s = []
+        for char in st:
+            if char.islower():
+                char = char.upper()
+                s.append(char)
+            elif char.isupper():
+                char = char.lower()
+                s.append(char)
+            else:
+                s.append(char)
+        st = ''
+        for ch in s:
+            st += str(ch)
+        return st
+
+    if __name__ == '__main__':
+        s = input()
+        result = swap_case(s)
+        print(result)
+
+
+swap_string()
