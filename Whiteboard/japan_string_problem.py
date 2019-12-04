@@ -7,23 +7,28 @@ def minwindowSubstring(mainstr):
     l2 = len(substr)
 
     have_str = []
+    found_1 = False
     found = False
     for i in range(l1-l2):
         cn = 0
         my_s = mystr[i:l2+i]
         test = 1
-        for j in range(l2):
-            print(substr[j])
+        j = 0
+        while(j < l2):
+            j = j + 1
+            print(substr[j-1])
             print(my_s)
-            if substr[j] in my_s:
-                found = True
+            if substr[j-1] in my_s:
+                found_1 = True
                 print(my_s)
-            elif not found:
+            if j ==l2 and found_1:
+                found = True
+            else:
                 cn += 1
                 j = j-1
-                print('hi : ',mystr[i+l2+cn])
-                my_s = my_s + mystr[i + l2 + cn]
-        if not found :
+                print('hi : ', mystr[i+l2+cn-1])
+                my_s = my_s + mystr[i + l2 + cn-1]
+        if not found:
             for item in have_str:
                 if len(my_s) < len(item) or len(have_str) == 0:
                     have_str.append(my_s)
@@ -32,6 +37,19 @@ def minwindowSubstring(mainstr):
     print(have_str)
     have_str.sort(key=len)
     print(have_str)
+str = 'python'
+s = 'yo'
+for i in range(len(str)):
+    c = 0
+    for j in range(len(s)):
+        if s[j]in str[i:len(s)+c]:
+            continue
+        else:
+            j = j-1
+            c = c+1
+
+
+
 
 
 # string = input('String: ')
