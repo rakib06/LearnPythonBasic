@@ -1,0 +1,21 @@
+for d in range(0,len(sequence)):
+		for e in range(0,len(sequence)):
+			if d == e:
+				continue
+			elif e < d+2:
+			elif (sequence[e] == sequence [d+2]):
+				cost+= flowcost[sequence[e]][sequence[e]]+flowcost
+
+def CalculateEnergy(flowcost_t_1,sequence,flowcost2,shiftCost):
+	tf0 = timeBaseflowcost(0,departments,flowCost2)
+	tf1 = timeBaseflowcost(1,departments,flowCost2)
+	tf2 = timeBaseflowcost(2,departments,flowCost2)
+	tf3 = timeBaseflowcost(3,departments,flowCost2)
+	tf4 = timeBaseflowcost(4,departments,flowCost2)
+	flowcost_t_1 = []
+	for i in range (0,6):
+	flowcost_t_1.append(flowCost2[i])
+
+	#print(flowcost_t_1)
+
+	ce1 = CalculateSingleEnergy6 (flowcost_t_1, sg[0],tf4,shiftCost)

@@ -53,14 +53,16 @@ def sequence_and_cost_convert_from_txt(path, file_name, dept):
     return dict,sequence
 
 
-path = "../textfile/output/test"
-file_name = '.7'
-dict, sequence = sequence_and_cost_convert_from_txt(path,file_name,6)
+def save_output(path):
 
-# best way for dictionary sorting but returns list
-sorted_word = sorted(dict.items(), key=operator.itemgetter(1), reverse=True)
-print(sorted_word)
-x = type(sorted_word)
-print(str(x))
-for cost, sequence in sorted_word:
-    print(sequence, '  Cost: ', cost)
+    path = "../textfile/output/test"
+    file_name = '.7'
+    dict, sequence = sequence_and_cost_convert_from_txt(path,file_name,6)
+
+    # best way for dictionary sorting but returns list
+    sorted_word = sorted(dict.items(), key=operator.itemgetter(1), reverse=True)
+    print(sorted_word)
+    x = type(sorted_word)
+    print(str(x))
+    for cost, sequence in sorted_word:
+        print(sequence, '  Cost: ', cost)

@@ -6,7 +6,7 @@ def Convert(string):
 
 # Open a file
 fo = open("test.txt", "r+")
-print ("Name of the file: ", fo.name)
+print("Name of the file: ", fo.name)
 
 
 # function for read all the output line by line and store it to line_list
@@ -69,7 +69,7 @@ for item in unique_dict.values():
     print(item)
 
 print(unique_dict.values())
-print(unique_dict.items())
+print(list(unique_dict.values()))
 
 
 
